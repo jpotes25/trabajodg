@@ -1,0 +1,55 @@
+<div class="contenedor">
+  <div class="titulo">
+    <h1>¡Aprende por mi!</h1>
+  </div>
+
+
+  <!-- Avatar cerebro-->
+  <img src="../assets/img/cerebrorender.png" alt="avatarbienvenida" class="avatarcerebro">
+
+
+  <!-- Slider dificultades -->
+    <div class="sliderprinc">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" *ngFor="let id of dificultades"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/img/autismoslider.png" class="d-block w-100 img-responsive" alt="...">
+          <div class="carousel-caption d-block">
+            <div class="tituloslider">
+              <a [routerLink]="['/conozcanos']"><p>Conozcanos</p></a>
+            </div>
+              <p class="descripcionslider">Click para saber mas sobre nosotros.</p>
+          </div>
+        </div>
+         <div class="carousel-item" *ngFor="let dificultad of dificultades">
+          <img src="{{dificultad.enlaceSlider}}" class="d-block w-100 img-responsive" alt="...">
+          <div class="carousel-caption d-block">
+            <div class="tituloslider">
+              <a [routerLink]="['/dificultad', dificultad.idDificultad]"><p>{{dificultad.nombreDificultad}}</p></a>
+            </div>
+              <p class="descripcionslider">Click para saber mas sobre {{dificultad.nombreDificultad}}</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+    </div>
+
+    <!-- FIN Slider dificultades -->
+<div class="titulo2">
+  <h1>Dificultades de Aprendizaje (DA)</h1>
+</div>
+
+
+</div>

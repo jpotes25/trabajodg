@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from proyecto &apos;spring-boot-backend-apirest&apos;&#x0D;&#x0A;- Proyecto original: &quot;spring-boot-backend-apirest&quot;&#x0D;&#x0A;- Elemento original: &apos;com.aprendepormi.springbootbackendapirest.models.services.ActividadServiceImpl.java&apos;" description="Eliminar elemento" element1="/src\/main\/java&lt;com.aprendepormi.springbootbackendapirest.models.services{ActividadServiceImpl.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1578977799818" subPackages="false" version="1.0"/>
+</session>

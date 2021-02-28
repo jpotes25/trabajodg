@@ -1,0 +1,45 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">
+    {{titulo}}
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group row">
+        <label for="nombreDificultad" class="col-form-label col-sm-2">Nombre: </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="dificultad.nombreDificultad" name="nombreDificultad">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="queEs" class="col-form-label col-sm-2">Que es:</label><br>
+        <div class="col-sm-6">
+          <textarea class="form-control" [(ngModel)]="dificultad.queEs" name="queEs" rows="8" cols="80"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="comoIdentificarlo" class="col-form-label col-sm-2">Como identificarlo:</label>
+        <div class="col-sm-6">
+          <textarea class="form-control" [(ngModel)]="dificultad.comoIdentificarlo" name="comoIdentificarlo" rows="8" cols="80"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="enlaceSlider" class="col-form-label col-sm-2">URL Slider:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="dificultad.enlaceSlider" name="enlaceSlider"  placeholder="Tamaño 552px w - 182px h">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-rounded btn-primary" role="button" (click)= 'create()' *ngIf="!dificultad.idDificultad else elseBlock">Crear</button>
+          <ng-template #elseBlock>
+            <button class="btn btn-rounded btn-primary" role="button" (click)= 'update()'>Editar</button>
+          </ng-template>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

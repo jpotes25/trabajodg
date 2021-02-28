@@ -1,0 +1,45 @@
+package com.aprendepormi.springbootbackendapirest.models.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.aprendepormi.springbootbackendapirest.models.dao.IMultimediaDAO;
+import com.aprendepormi.springbootbackendapirest.models.entity.Dificultad;
+import com.aprendepormi.springbootbackendapirest.models.entity.Multimedia;
+
+
+@Service
+public class MultimediaServiceImpl implements IMultimediaService{
+	@Autowired
+	private IMultimediaDAO multimediaDao;
+	
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Multimedia> findAll() {
+		// TODO Auto-generated method stub
+		
+		return (List<Multimedia>) multimediaDao.findAll();
+	}
+	@Override
+	@Transactional(readOnly = true)
+	public Multimedia findById(Long id) {
+		// TODO Auto-generated method stub
+		return multimediaDao.findById(id).orElse(null);
+	}
+	@Override
+	@Transactional
+	public Multimedia save(Multimedia multimedia) {
+		// TODO Auto-generated method stub
+		return multimediaDao.save(multimedia);
+	}
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		multimediaDao.deleteById(id);
+	}
+}

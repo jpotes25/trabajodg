@@ -1,0 +1,56 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">
+    {{titulo}}
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group row">
+        <label for="nombreReferente" class="col-form-label col-sm-2">Nombre: </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="referentes.nombreReferente" name="nombreReferente">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="titulo" class="col-form-label col-sm-2">Titulo:</label><br>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="referentes.tituloReferente" name="tituloReferente">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="enlaceBiografia" class="col-form-label col-sm-2">URL Biografia:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="referentes.enlaceBiografia" name="enlaceBiografia">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="imagenReferente" class="col-form-label col-sm-2">Foto referente:</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="referentes.imagenReferente" name="imagenReferente" placeholder="Tamaño 250px h - 200px v">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-rounded btn-primary" role="button" (click)= 'asignar()' *ngIf="!referentes.idReferente then thenBlock else elseBlock">Crear</button>
+          <ng-template #thenBlock>
+            <div class="form-group row">
+              <label for="enlaceSlider" class="col-form-label col-sm-4">Dificultad asignada:</label>
+                <select class="custom-select" id="inputGroupSelect04" [(ngModel)]="opcionSeleccionada" name="opcionSeleccionada" (change)="seleccion()">
+                  <option selected>Ninguna</option>
+                  <option *ngFor="let dificultad of dificultades">{{dificultad.nombreDificultad}}</option>
+                </select>
+            </div>
+            <button class="btn btn-rounded btn-primary" role="button" (click)= 'asignar()'>Crear</button>
+          </ng-template>
+          <ng-template #elseBlock>
+            <button class="btn btn-rounded btn-primary" role="button" (click)= 'update()'>Editar</button>
+          </ng-template>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

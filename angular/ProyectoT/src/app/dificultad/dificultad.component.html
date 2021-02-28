@@ -1,0 +1,46 @@
+<a routerLink="/"><h1 class="titulo2">¡Aprende por mi!</h1></a>
+<h2 class="subtitulo" >{{dificul.nombreDificultad}}</h2>
+<div class="infinite">
+  <div class="btn-menu">
+    <img src="../assets/img/iconomenu.png" alt="menu">
+    <span>Dificultad</span>
+  </div>
+  <div class="divlateral">
+    <img src="../assets/img/cerebrohablar.png" alt="cerebro" class="cerebrohablar">
+  </div>
+<div class="divmenu">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+    <button class="navbar-toggler collapsed" type="button" (click)="toggleState()">
+      <span class="navbar-toggler-icon"></span>
+      <span>Que es</span>
+    </button>
+
+    <div class="navbar-collapse" [ngClass]="{ 'collapse': isCollapse }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link">Que es</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/comoIdentificarla', dificul.idDificultad]">Como identificarla</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/multimediadif', dificul.idDificultad]">Multimedia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/actividades', dificul.idDificultad]">Actividades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/referentes', dificul.idDificultad]">Referentes</a>  
+          </li>
+
+      </ul>
+
+    </div>
+  </nav>
+  </div>
+
+  <div class="divprinc">
+  <pre>{{dificul.queEs}}</pre>
+  </div>
+
+</div>

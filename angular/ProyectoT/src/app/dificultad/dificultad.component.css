@@ -1,0 +1,167 @@
+.infinite {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+.divprinc{
+  width: 75%;
+  height: 300px;
+  position: relative;
+  background-color: rgba(99, 231, 102, 0.8);
+  border: 1px solid black;
+  float: left;
+  overflow-y: scroll;
+
+}
+.btn-menu{
+  visibility: hidden;
+}
+.divmenu{
+
+  width: 75%;
+  height: 40px;
+  background-color: rgba(99, 231, 102, 0.8);
+  border: 1px solid black;
+  border-bottom: none;
+}
+.divlateral {
+  background-color: rgba(133, 197, 170, 0.7);
+  width:25%;
+  height: 340px;
+  float: right;
+  border: 1px solid black;
+  border-left: none;
+
+
+}
+.titulo2{
+  margin-top: 5%;
+  text-align: center;
+  font-family: lobster;
+  font-size: 60px;
+
+  /* degradado */
+  background: -webkit-linear-gradient(red 40%, orange, yellow, green, cyan, blue,violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: tomato;
+
+  /* delineado */
+  -webkit-text-stroke: 2px black;
+}
+
+.cerebrohablar{
+  margin-top: 10%;
+  margin-left: 13%;
+}
+
+.navbar{
+  height: 40px;
+
+}
+.nav-link:hover{
+  color: rgb(0,0,0);
+
+}
+.active a{
+  color: black;
+
+}
+.nav-link{
+  color: rgba(0,0,0, 0.5);
+  font-size: 15px;
+}
+
+.nav-item{
+margin-right: 40px;
+}
+
+.btn-menu {
+  width: 100%;
+
+}
+
+.btn-menu img {
+    margin-right: 10px;
+}
+
+
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width:1120px){
+  .nav-link{
+    font-size: 15px;
+  }
+  .nav-item {
+    margin-right: 30px;
+  }
+  .cerebrohablar{
+    margin-left: 10%;
+    width: 80%;
+    height: auto;
+    margin-top: 20%;
+  }
+
+}
+
+@media screen and (max-width:1040px){
+  .nav-item {
+    margin-right: 20px;
+  }
+
+@media screen and (max-width:963px){
+  .divlateral{
+    display: none;
+  }
+  .divmenu{
+    width: 100%;
+    height: auto;
+  }
+  .divprinc{
+    width: 100%;
+  }
+  .navbar {
+    height: auto;
+  }
+}
+
+@media screen and (max-width:725px){
+  .nav-item{
+    margin-right: 5px;
+  }
+  .nav-link{
+    font-size: 13px;
+  }
+
+}
+
+@media screen and (max-width:575px){
+
+
+  .navbar-nav{
+    width: 100%;
+
+  }
+
+}
+}

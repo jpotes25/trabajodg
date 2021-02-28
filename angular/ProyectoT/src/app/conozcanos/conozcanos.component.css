@@ -1,0 +1,61 @@
+.infinite {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+.divprinc{
+  margin-top: 10%;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-color: rgba(99, 231, 102, 0.8);
+  border: 1px solid black;
+  float: left;
+  overflow-y: scroll;
+
+}
+
+.divprinc p{
+  margin: 0;
+  padding: 0;
+}
+
+.pantalla {
+  padding: 5%;
+  padding-top: 1%;
+  display: inline-block;
+}
+
+.titulo2{
+  margin-top: 5%;
+  text-align: center;
+  font-family: lobster;
+  font-size: 60px;
+
+  /* degradado */
+  background: -webkit-linear-gradient(red 40%, orange, yellow, green, cyan, blue,violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: tomato;
+
+  /* delineado */
+  -webkit-text-stroke: 2px black;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width:740px){
+  .pantalla{
+    margin-left: 15%;
+  }
+}
